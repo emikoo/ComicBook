@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    tools:context=".ui.browse.BrowseFragment">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_civ"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_marginTop="@dimen/view_margin_top"
+        android:layout_marginStart="@dimen/view_margin_start"/>
+
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/profile_civ"
+        android:text="Browse"
+        style="@style/MainTitle"/>
+
+    <ImageButton
+        android:id="@+id/search_ib"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/profile_civ"
+        android:layout_gravity="center"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_search"
+        android:layout_marginTop="@dimen/view_margin_top"
+        android:layout_marginEnd="@dimen/view_margin_end"/>
+
+
+    <TextView
+        android:id="@+id/types_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/profile_civ"
+        app:layout_constraintTop_toBottomOf="@id/profile_civ"
+        android:text="Types"
+        style="@style/Title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/types_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/profile_civ"
+        app:layout_constraintTop_toBottomOf="@+id/types_tv"
+        android:layout_marginTop="@dimen/view_margin_top"
+        android:layout_marginStart="@dimen/view_margin_start"
+        android:layout_marginEnd="@dimen/view_margin_end"/>
+
+    <TextView
+        android:id="@+id/last_updates_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/profile_civ"
+        app:layout_constraintTop_toBottomOf="@id/types_rv"
+        android:text="Last updates"
+        style="@style/Title"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/last_updates_rv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/profile_civ"
+        app:layout_constraintTop_toBottomOf="@id/last_updates_tv"
+        android:layout_marginTop="@dimen/view_margin_top"
+        android:layout_marginStart="@dimen/view_margin_start"
+        android:layout_marginEnd="@dimen/view_margin_end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
